@@ -13,4 +13,4 @@ ARG JAR_FILE=target/todolist-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} app.jar
 
 #configures main process executable command
-ENTRYPOINT ["java", "-Dserver.port=80", "-Xmx512m", "-Xms256m", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dserver.port=$PORT", "-Xmx512m", "-Xms256m", "-jar", "app.jar"]
